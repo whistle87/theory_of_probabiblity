@@ -3,16 +3,6 @@
  Из первого ящика вытаскивают случайным образом два мяча, из второго - 4 мяча.
  Какова вероятность того, что 3 мяча белые?
 """
-import math
-
-
-def Bernoulli(n, k, p):
-    return (math.factorial(n) / (math.factorial(k) * math.factorial(n - k))) * \
-           (p ** k) * ((1 - p) ** (n - k))
-
-
-P_3 = Bernoulli(2, 0, 5 / 8) * Bernoulli(4, 3, 5 / 12) + \
-      Bernoulli(2, 1, 5 / 8) * Bernoulli(4, 2, 5 / 12) + \
-      Bernoulli(2, 1, 5 / 8) * Bernoulli(4, 1, 5 / 12)
+P_3 = (3/8)* (2/7)*
 
 print(P_3)
