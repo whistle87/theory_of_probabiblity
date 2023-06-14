@@ -9,6 +9,6 @@ from scipy import stats
 before = [150, 160, 165, 145, 155]
 after = [140, 155, 150, 130, 135]
 # Так как выборок две и они зависимые, то применяем критерий Уилкоксона
-print(stats.wilcoxon(before, after))  # WilcoxonResult(statistic=0.0, pvalue=0.0625)
+stats.wilcoxon(before, after)  # WilcoxonResult(statistic=0.0, pvalue=0.0625)
 # pvalue > 0.05, значит нулевую гипотезу не отвергаем
 # делаем вывод, что со статистическим уровнем значимости 0.05 препарат не работает
