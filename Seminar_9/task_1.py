@@ -14,9 +14,9 @@ ks = numpy.array([401, 574, 874, 919, 459, 739, 653, 902, 746, 832])  # y
 n = len(zp)
 b = (n * numpy.sum(zp * ks) - numpy.sum(zp) * numpy.sum(ks)) / (n * numpy.sum(zp ** 2) - numpy.sum(zp) ** 2)
 a = numpy.mean(ks) - numpy.mean(zp) * b
-print(a, b) # 444.17735732435955 2.6205388824027653
+print(a, b)  # 444.17735732435955 2.6205388824027653
 #  без intersept
 x = zp.reshape((n, 1))
 y = ks.reshape((n, 1))
 B = numpy.dot(numpy.linalg.inv(numpy.dot(x.T, x)), x.T @ y)
-print(B) # 5.88982042
+print(B)  # 5.88982042
